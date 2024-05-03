@@ -9,16 +9,6 @@ import ServiceSection from "./ServiceSection/ServiceSection";
 import SocialGatheringSection from "./SocialGathering/SocialGatheringSection";
 
 const HomePage = () => {
-	const { isLoading, error } = useGetUser();
-
-	if (error) {
-		console.log(error);
-	}
-
-	if (isLoading) {
-		return <h2>...Loading</h2>;
-	}
-
 	return (
 		<>
 			<div>

@@ -1,5 +1,5 @@
 import Slider from "./Slider";
-import starss from "./assets/star-list.png";
+import starss from "./assets/stars.png";
 
 const OurClientSection = () => {
   return (

@@ -26,7 +26,7 @@ const WorkingSection = () => {
           <img src={headphones} alt="headphones" />
           <div className="ml-4">
             <h6 className="text-[#FA441D] text-[26px] font-bold">
-              +012 12383492
+              +012 1234567890
             </h6>
             <p className="text-[16px] font-semibold">
               Got Questions? Call us 24/7

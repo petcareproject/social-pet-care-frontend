@@ -1,6 +1,6 @@
 import FooterSection from "../Footer/FooterSection";
 import LogoHeader from "../HeroSection/LogoHeader";
-import Navbar from "../HeroSection/Navbar";
+// import Navbar from "../HeroSection/Navbar";
 import BannerSection from "./BannerSection";
 import CardSection from "./CardSection";
 
@@ -9,7 +9,7 @@ const Nearby = () => {
     <>
       <div>
         <div className="bg-common">
-          <Navbar />
+          {/* <Navbar /> */}
           <LogoHeader />
           <div className="container mx-auto md:px-6 px-4">
             <BannerSection />

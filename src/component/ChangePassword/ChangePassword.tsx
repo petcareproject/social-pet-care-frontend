@@ -10,7 +10,7 @@ const ChangePass = () => {
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const { mutate: changePassword } = useChangePassword();
+  const { mutate: changePassword, isPending } = useChangePassword();
   const [isVisiblePass, setVisiblePass] = useState<boolean>(false);
   const [isnewPass, setNewPass] = useState<boolean>(false);
   const [iscnfrmNewPass, setcnfrmNewPass] = useState<boolean>(false);
@@ -29,15 +29,15 @@ const ChangePass = () => {
     <>
       <div>
         <div className="bg-login flex flex-col px-1 py-2">
-          <div className="px-10">
+          <div className=" px-10">
             <CommonHeader />
           </div>
           <div className="flex-1 flex items-center justify-center">
-            <div className="md:flex justify-center gap-10  items-center w-full  ">
+            <div className="md:flex justify-center gap-10  items-center w-full  container mx-auto px-4">
               <div className="md:w-[48%] hidden md:flex justify-center">
                 <img src={login} alt=" Login image" />
               </div>
-              <div className="lg:w-[40%]  w-full pt-10 md:pt-0">
+              <div className="lg:w-[40%]  w-full pt-10 md:pt-0 ">
                 <h1 className="text-[34px] font-bold mb-4">Change Password</h1>
                 <p className="md:text-[22px] text-[20px] mb-8">
                   Enter your current password to change password
@@ -48,8 +48,8 @@ const ChangePass = () => {
                       Current Password
                     </label>
                     <input
-                      //   onChange={(e) => setCurrentPassword(e.target.value)}
-                      //   value={currentPassword}
+                      onChange={(e) => setCurrentPassword(e.target.value)}
+                      value={currentPassword}
                       type={!isVisiblePass ? "password" : "text"}
                       name="password"
                       placeholder="***************"
@@ -72,8 +72,8 @@ const ChangePass = () => {
                       New Password
                     </label>
                     <input
-                      //   onChange={(e) => setNewPass(e.target.value)}
-                      //   value={newPassword}
+                      onChange={(e) => setNewPassword(e.target.value)}
+                      value={newPassword}
                       type={!isnewPass ? "password" : "text"}
                       name="password"
                       placeholder="***************"
@@ -96,8 +96,8 @@ const ChangePass = () => {
                       Confirm New Password
                     </label>
                     <input
-                      //   onChange={(e) => setConfirmPassword(e.target.value)}
-                      //   value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      value={confirmPassword}
                       type={!iscnfrmNewPass ? "password" : "text"}
                       name="password"
                       placeholder="***************"
@@ -122,10 +122,11 @@ const ChangePass = () => {
                     <a className="underline ml-1"> Privacy Policy</a>.
                   </p>
                   <Button
+                    disabled={isPending}
                     type="submit"
                     className="w-full my-5 text-[16px] bg-[#FF553E] text-white py-3"
                   >
-                    Continue
+                    {isPending ? "...Loading" : "Continue"}
                   </Button>
                 </form>
               </div>

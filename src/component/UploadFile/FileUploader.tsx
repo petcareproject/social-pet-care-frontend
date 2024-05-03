@@ -68,27 +68,25 @@ import { UploadButton } from "react-uploader";
 import { Uploader } from "uploader";
 
 const uploader = Uploader({
-  apiKey: "free",
+	apiKey: "free",
 });
 
-const options = { multi: true };
+const options = { multi: false };
 
 const FileUploader = () => (
-  <UploadButton
-    uploader={uploader}
-    options={options}
-    onComplete={(files) => alert(files.map((x) => x.fileUrl).join("\n"))}
-  >
-    {({ onClick }) => (
-      <button
-        type="button"
-        onClick={onClick}
-        className="border-2 border-[#FFE3E3] px-8 py-4 rounded-md font-semibold"
-      >
-        Browser File
-      </button>
-    )}
-  </UploadButton>
+	<UploadButton
+		uploader={uploader}
+		options={options}
+		onComplete={(files) => alert(files.map((x) => x.fileUrl).join("\n"))}>
+		{({ onClick }) => (
+			<button
+				type="button"
+				onClick={onClick}
+				className="border-2 border-[#FFE3E3] px-8 py-4 rounded-md font-semibold">
+				Browser File
+			</button>
+		)}
+	</UploadButton>
 );
 
 export default FileUploader;

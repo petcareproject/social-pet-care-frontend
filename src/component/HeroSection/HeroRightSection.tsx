@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect, useState } from "react";
 import { Navigation, Pagination, Autoplay, FreeMode } from "swiper/modules";
 import slider from "./assets/Component 1.png";
+import slider2 from "./assets/slide2.png";
+import slider3 from "./assets/slide3.png";
 
 const HeroRightSection = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -85,12 +87,12 @@ const HeroRightSection = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="mx-auto w-full lg:pl-[50px] md:pl-[20px]">
-              <img src={slider} alt="slider image" />
+              <img src={slider2} alt="slider image" />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="mx-auto w-full lg:pl-[50px] md:pl-[20px]">
-              <img src={slider} alt="slider image" />
+              <img src={slider3} alt="slider image" />
             </div>
           </SwiperSlide>
         </Swiper>

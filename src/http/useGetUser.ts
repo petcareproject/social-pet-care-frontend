@@ -12,6 +12,7 @@ const useGetUser = () => {
 			const response = await http.get(url);
 			dispatch(updateUser(response.data.users));
 			dispatch(setIsAuthorized(true));
+			return response.data;
 		} catch (error) {
 			throw new Error(error.message);
 		}

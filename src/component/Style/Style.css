@@ -145,7 +145,6 @@
   background-image: url("../UserProfile/assets/bg-image.png");
   width: 100%;
   background-size: cover;
-  height: 100vh;
 }
 
 .bg-round:before {
@@ -174,6 +173,13 @@
 .image-gallery-thumbnail {
   width: 150px !important;
   margin-right: 20px;
+}
+.tab-style li {
+  flex-grow: 0 !important;
+}
+.tab-style li a {
+  border-bottom: none !important;
+  padding: 0;
 }
 /* ---------------------------- */
 
@@ -268,9 +274,7 @@
     padding-left: 50px;
     padding-top: 50px;
   }
-  .menu li {
-    margin-top: 20px;
-  }
+
   .menu li a {
     padding: 10px;
   }

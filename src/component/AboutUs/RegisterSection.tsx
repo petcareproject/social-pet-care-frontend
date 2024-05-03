@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import Button from "../ui/Button";
 import dog_image from "./assets/pet8.png";
 const RegisterSection = () => {
+  const navigate = useNavigate();
+
+  const redirectToSignup = () => {
+    navigate("/signup");
+  };
+
   return (
     <>
       <div className="md:flex block justify-between bg-yellow m-auto py-3 xl:my-20 my-10">
@@ -23,6 +30,7 @@ const RegisterSection = () => {
           <Button
             variant={{ theme: "dark", thickness: "thick" }}
             className="rounded-full mt-4 md:px-8 md:py-3"
+            onClick={redirectToSignup}
           >
             Register Now
           </Button>

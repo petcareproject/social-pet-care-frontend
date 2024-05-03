@@ -11,12 +11,14 @@ import FormSection from "./component/Form/FormSection";
 import Nearby from "./component/NearbyPet/Nearby";
 import PetDetail from "./component/PetDetail/PetDetail";
 import AboutUs from "./component/AboutUs/AboutUs";
+import Auth from "./component/Auth";
 import setup from "./utlis/intersecptor";
 
 import "./App.css";
 import PasswordChangedSuccessPage from "./component/Login/ChangePassword";
 import Contact from "./component/ContactUs/Contact";
 import UserProfile from "./component/UserProfile/UserProfile";
+import AuthHoc from "./component/AuthHoc/AuthHoc"
 
 function App() {
   setup();
@@ -29,7 +31,26 @@ function App() {
         <QueryClientProvider client={queryClient}>
           <BrowserRouter>
             <Routes>
-              <Route path="/*" element={<HomePage />} />
+              {/* AUTH ROUTES */}
+              <Route path="/" element={<Auth />}>
+                <Route index element={<HomePage />} />
+                <Route path="/otp" element={<Otp />}></Route>
+                <Route path="/form" element={<FormSection />}></Route>
+                <Route path="/search" element={<Nearby />}></Route>
+                <Route path="/detail" element={<PetDetail />}></Route>
+                <Route path="/userprofile" element={<UserProfile />}></Route>
+                <Route
+                  path="/change_password"
+                  element={<ChangePassword />}
+                ></Route>
+                <Route
+                  path="/passwordchanged"
+                  element={<PasswordChangedSuccessPage />}
+                ></Route>
+              </Route>
+
+              <Route path="/about" element={<AboutUs />}></Route>
+              <Route path="/contact" element={<Contact />}></Route>
               <Route path="/signup" element={<SignUpForm />} />
               <Route path="/login" element={<Login />}></Route>
               <Route
@@ -37,21 +58,6 @@ function App() {
                 element={<ForgetPassword />}
               ></Route>
               <Route path="/resetpassword" element={<ResetPassword />}></Route>
-              <Route
-                path="/change_password"
-                element={<ChangePassword />}
-              ></Route>
-              <Route
-                path="/passwordchanged"
-                element={<PasswordChangedSuccessPage />}
-              ></Route>
-              <Route path="/otp" element={<Otp />}></Route>
-              <Route path="/form" element={<FormSection />}></Route>
-              <Route path="/search" element={<Nearby />}></Route>
-              <Route path="/detail" element={<PetDetail />}></Route>
-              <Route path="/about" element={<AboutUs />}></Route>
-              <Route path="/contact" element={<Contact />}></Route>
-              <Route path="/user_profile" element={<UserProfile />}></Route>
             </Routes>
           </BrowserRouter>
         </QueryClientProvider>

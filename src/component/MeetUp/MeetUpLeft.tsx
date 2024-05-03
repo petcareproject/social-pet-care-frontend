@@ -1,4 +1,4 @@
-import meet from "./assets/puppy.png";
+import meet from "./assets/div.dog-walker.png";
 
 const MeetUpLeft = () => {
   return (

@@ -1,5 +1,4 @@
 import image1 from "./assets/Item → pets.jpg.png";
-import img1 from "./assets/pets1.png";
 import img2 from "./assets/pet2.png";
 import img3 from "./assets/pet3.png";
 import location from "./assets/location.png";
@@ -9,10 +8,6 @@ import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
 const images = [
-  {
-    original: image1,
-    thumbnail: img1,
-  },
   {
     original: image1,
     thumbnail: img2,
@@ -81,7 +76,7 @@ const DetailLeft = () => {
             <div className="2xl:w-[80%] lg:w-[90%] lg:text-left w-full text-center">
               <h6 className="font-semibold text-[17px]">Andrews 220 street</h6>
               <p className="text-[#444444] xl:text-[16px] lg:text-[15px] 2xl:mr-16 mr-0 md:mt-2 mt-1">
-                8576 Sycamore Ave. Villa Rica, GA 30180
+                8576 Sycamore Avenue, United Kingdom
               </p>
             </div>
           </div>
@@ -91,7 +86,7 @@ const DetailLeft = () => {
               <img src={email} alt="location" className="w-[21px] h-[21px]" />
             </div>
             <div className="text-center">
-              <h6 className="font-semibold text-[17px]">info@pets.com</h6>
+              <h6 className="font-semibold text-[17px]">Admin@gmail.com</h6>
             </div>
           </div>
 
@@ -100,7 +95,7 @@ const DetailLeft = () => {
               <img src={call} alt="location" className="w-[21px] h-[21px]" />
             </div>
             <div className="text-center">
-              <h6 className="font-semibold text-[17px]">114 3354 3369</h6>
+              <h6 className="font-semibold text-[17px]">+44 1234567890</h6>
             </div>
           </div>
         </div>

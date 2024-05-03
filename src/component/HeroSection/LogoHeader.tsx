@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../ui/Button";
 import logo from "./assets/heading-img.png.png";
 import { useAppSelector } from "../../store/typedReduxHooks";
@@ -45,12 +45,6 @@ const LogoHeader = () => {
     navigate("/");
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    setIsLogin(false);
-    redirectToHomepage();
-  };
-
   return (
     <>
       <div
@@ -72,25 +66,23 @@ const LogoHeader = () => {
           <div className="md:flex hidden">
             <Navbar className="flex">
               <Nav className="flex">
-                <Nav.Link href="/" className="px-4">
-                  Home
-                </Nav.Link>
-                <Nav.Link href="/about" className="px-4">
-                  About Us
-                </Nav.Link>
-                <Nav.Link href="/" className="px-4">
-                  Service
-                </Nav.Link>
-                <Nav.Link href="/contact" className="px-4">
-                  Contact
-                </Nav.Link>
-                <Nav.Link href="/form" className="px-4">
-                  ListPet
-                </Nav.Link>
+                <Link to={"/"}>
+                  <Nav.Item className="px-4">Home</Nav.Item>
+                </Link>
+                <Link to={"/about"}>
+                  <Nav.Item className="px-4">About Us</Nav.Item>
+                </Link>
+                <Link to={"/"}>
+                  <Nav.Item className="px-4">Service</Nav.Item>
+                </Link>
+                <Link to={"/contact"}>
+                  <Nav.Item className="px-4">Contact</Nav.Item>
+                </Link>
+
                 {!user && (
-                  <Nav.Link href="/signup" className="px-4">
-                    Signup
-                  </Nav.Link>
+                  <Link to={"/signup"}>
+                    <Nav.Item className="px-4">Signup</Nav.Item>
+                  </Link>
                 )}
               </Nav>
             </Navbar>
@@ -121,56 +113,37 @@ const LogoHeader = () => {
           </a>
           <input type="checkbox" id="check" />
 
-          <span className="menu  ">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/">About Us</a>
-            </li>
-            <li>
-              <a href="/">Service</a>
-            </li>
-            <li>
-              <a href="/search">Search</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-            {!user && (
-              <li>
-                <a href="/signup">Signup</a>
-              </li>
-            )}
-
-            {/* <li>
-              <a href="/login">Login</a>
-            </li> */}
-            <li>
-              {!isLogin && (
-                <a
-                  // variant={{ theme: "dark", thickness: "thick" }}
+          <Navbar className="menu">
+            <Nav className="">
+              <Link to={"/"}>
+                <Nav.Item className="px-4 pb-10">Home</Nav.Item>
+              </Link>
+              <Link to={"/about"}>
+                <Nav.Item className="px-4 pb-10">About Us</Nav.Item>
+              </Link>
+              <Link to={"/"}>
+                <Nav.Item className="px-4 pb-10">Service</Nav.Item>
+              </Link>
+              <Link to={"/contact"}>
+                <Nav.Item className="px-4 pb-10">Contact</Nav.Item>
+              </Link>
+            </Nav>
+            <label htmlFor="check" className="close-menu">
+              X
+            </label>
+            <div className="flex justify-start">
+              {!user && (
+                <Button
+                  variant={{ theme: "dark", thickness: "thick" }}
                   className="px-4 py-2 lg:px-10 lg:py-4 "
                   onClick={redirectToLogin}
                 >
                   Login
-                </a>
+                </Button>
               )}
-              {isLogin && (
-                <a
-                  // variant={{ theme: "dark", thickness: "thick" }}
-                  className="px-4 py-2 lg:px-10 lg:py-4 "
-                  onClick={handleLogout}
-                >
-                  Logout
-                </a>
-              )}
-            </li>
-
-            <label htmlFor="check" className="close-menu">
-              X
-            </label>
-          </span>
+              {user && <UserActionDropDown />}
+            </div>
+          </Navbar>
 
           <label htmlFor="check" className="open-menu">
             <svg

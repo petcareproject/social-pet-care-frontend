@@ -1,4 +1,4 @@
-import search from "./assets/search.png";
+// import search from "./assets/search.png";
 import image1 from "./assets/div.dt-sc-team-thumb.png";
 import image2 from "./assets/team-thumb2.png";
 import image3 from "./assets/sitter3.jpg.png";
@@ -150,21 +150,6 @@ const CardSection = () => {
                     onClick={closeDropdown}
                   ></div>
                 )}
-              </div>
-
-              <div className="relative md:w-[48%] w-full mt-4 md:mt-0">
-                <button className="absolute left-0 top-1/2 -translate-y-1/2 ">
-                  <img
-                    src={search}
-                    alt="search-icon"
-                    className="lg:pl-4 md:pl-2 pl-5"
-                  />
-                </button>
-                <input
-                  type="text"
-                  placeholder="Search"
-                  className="px-10 py-4 border border-black rounded-full w-full"
-                />
               </div>
             </div>
           </div>

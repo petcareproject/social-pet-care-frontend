@@ -1,4 +1,4 @@
-import PetOwnerCard from "./PetOwnerCard";
+// import PetOwnerCard from "./PetOwnerCard";
 
 const DetailRight = () => {
   return (
@@ -48,7 +48,7 @@ const DetailRight = () => {
         </div>
       </div>
 
-      <PetOwnerCard />
+      {/* <PetOwnerCard /> */}
     </div>
   );
 };
