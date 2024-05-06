@@ -182,6 +182,11 @@
   padding: 0;
 }
 /* ---------------------------- */
+@media (min-width: 1536px) {
+  .vertical {
+    display: block !important;
+  }
+}
 
 @media screen and (min-width: 1280px) {
   .dog-image:before {

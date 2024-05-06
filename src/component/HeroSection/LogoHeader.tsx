@@ -78,9 +78,6 @@ const LogoHeader = () => {
                 <Link to={"/about"}>
                   <Nav.Item className="px-4">About Us</Nav.Item>
                 </Link>
-                <Link to={"/"}>
-                  <Nav.Item className="px-4">Service</Nav.Item>
-                </Link>
                 <Link to={"/contact"}>
                   <Nav.Item className="px-4">Contact</Nav.Item>
                 </Link>
@@ -127,9 +124,7 @@ const LogoHeader = () => {
               <Link to={"/about"}>
                 <Nav.Item className="px-4 pb-10">About Us</Nav.Item>
               </Link>
-              <Link to={"/"}>
-                <Nav.Item className="px-4 pb-10">Service</Nav.Item>
-              </Link>
+
               <Link to={"/contact"}>
                 <Nav.Item className="px-4 pb-10">Contact</Nav.Item>
               </Link>

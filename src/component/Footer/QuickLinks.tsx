@@ -43,26 +43,6 @@ const QuickLinks = () => {
                 Contact Us
               </p>
             </Nav.Link>
-            <Nav.Link href="/login" className="flex mb-6 text-[16px] leading-6">
-              {" "}
-              <img
-                src={arrow}
-                alt="arrow"
-                className="mr-4 w-[7px]  h-[11px] mt-[4px]  "
-              />
-              <p className="text-[16px] font-semibold text-[#555555]">Login</p>
-            </Nav.Link>
-            <Nav.Link
-              href="/signup"
-              className="flex mb-6 text-[16px] leading-6"
-            >
-              <img
-                src={arrow}
-                alt="arrow"
-                className="mr-4 w-[7px]  h-[11px] mt-[4px]  "
-              />
-              <p className="text-[16px] font-semibold text-[#555555]">Signup</p>
-            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
