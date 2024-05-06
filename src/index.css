@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html.lenis {
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #000 !important;
+}
+input[type="date"].dark::-webkit-calendar-picker-indicator {
+  color-scheme: dark;
+}
+
+@layer base {
+  :root {
+    --border_light: #ffff;
+    --border_Dark: #0000;
+    --dark_background: #10111c;
+    --faded_text: #e3e3e3;
+    --secondary_text: #fd9d44;
+    --font-size-sm: clamp(0.84rem, 0.2vw + 0.75rem, 0.9rem);
+    --font-size-base: clamp(0.84rem, 0.28vw + 0.77rem, 1rem);
+    --font-size-md: clamp(1.05rem, 0.51vw + 0.93rem, 1.33rem);
+    --font-size-lg: clamp(1.32rem, 0.83vw + 1.11rem, 1.78rem);
+    --font-size-xl: clamp(1.65rem, 1.31vw + 1.32rem, 2.37rem);
+    --font-size-2xl: clamp(2.06rem, 2vw + 1.56rem, 3.16rem);
+    --font-size-3xl: clamp(2.57rem, 2.97vw + 1.83rem, 4.21rem);
+  }
+}
+
+@font-face {
+  font-family: "AmstelvarAlpha";
+  letter-spacing: 10px;
+  src: local("AmstelvarAlpha"),
+    url(./assets/fonts/AmstelvarAlpha-VF.woff) format("woff");
+}
+
+.hide-scrollBar {
+  scrollbar-width: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

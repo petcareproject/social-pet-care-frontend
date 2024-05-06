@@ -1,0 +1,302 @@
+.bg-image {
+  background-image: url("../../assets/Rectangle 1.png");
+  background-size: cover;
+  padding-bottom: 50px;
+}
+.before-img,
+.dog-image {
+  position: relative;
+}
+.before-img:before {
+  content: "";
+  background-image: url("../../assets/Epic-arow.png");
+  width: 20%;
+  height: 40%;
+  position: absolute;
+  background-repeat: no-repeat;
+  left: -145px;
+  top: -30%;
+}
+.before-img:after {
+  content: "";
+  background-image: url("../../assets/epicpaws-ball-toy.png");
+  width: 20%;
+  height: 40%;
+  position: absolute;
+  background-repeat: no-repeat;
+  right: -185px;
+  top: -30%;
+  display: none;
+}
+.text-color {
+  color: white !important;
+}
+.dog-image:before {
+  content: "";
+  background-image: url("../FriendSection/assets/Epic-arrow4.png.png");
+  width: 20%;
+  height: 45%;
+  position: absolute;
+  background-repeat: no-repeat;
+  left: 0px;
+  top: -24%;
+}
+.svg-bg {
+  background-image: url("../OurClient/assets/Section_cleanup.png");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+}
+.bg-chngpas {
+  background-image: url("../Login/assets/Login2.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  display: none;
+}
+.bg-footer {
+  background-image: url("../Footer/assets/Footer.png");
+  background-size: cover;
+  width: 100%;
+}
+.bottom-border {
+  position: relative;
+}
+.bottom-border:before {
+  content: "";
+  position: absolute;
+  background-color: #fa441d;
+  width: 70px;
+  height: 5px;
+  top: 45px;
+}
+.bg-register {
+  background-image: url("../../component/AboutUs/assets/bg-register.png");
+  width: 100%;
+  background-size: cover;
+}
+.bg-login {
+  background-image: url("../Login/assets/Login_page.png");
+  width: 100%;
+  background-size: cover;
+  height: 100vh;
+}
+::placeholder {
+  color: black !important;
+}
+.close-menu,
+.open-menu {
+  position: absolute;
+  cursor: pointer;
+  display: none;
+}
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+#check {
+  display: none;
+}
+.bg-form {
+  background-image: url("../Form/assets/Rectangle 1.png");
+  width: 100%;
+  background-size: cover;
+}
+.swiper-pagination-bullet {
+  width: 30px !important;
+  height: 2px !important;
+}
+.swiper-pagination {
+  text-align: right;
+}
+.swiper-pagination-bullet-active {
+  background-color: #fa441d !important;
+}
+.bg-common {
+  background-image: url("../NearbyPet/assets/bgImage.png");
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+.nearbybg-image {
+  background-image: url("../NearbyPet/assets/Rectangle3.png");
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+.bg-yellow {
+  background-image: url("../AboutUs/assets/mockup.png");
+  width: 100%;
+  background-size: cover;
+}
+.bg-userprofile {
+  background-image: url("../UserProfile/assets/bg-image.png");
+  width: 100%;
+  background-size: cover;
+}
+
+.bg-round:before {
+  content: "";
+  position: absolute;
+  background-image: url("../AboutUs/assets/round-bg.png");
+  width: 430px;
+  height: 369px;
+  top: -40px;
+}
+
+/* ---------------------------- */
+.image-gallery-left-nav,
+.image-gallery-right-nav,
+.image-gallery-fullscreen-button,
+.image-gallery-play-button {
+  display: none;
+}
+.image-gallery-thumbnails {
+  margin-top: 20px;
+}
+.image-gallery-thumbnail-inner img {
+  width: 150px !important;
+  height: 150px !important;
+}
+.image-gallery-thumbnail {
+  width: 150px !important;
+  margin-right: 20px;
+}
+.tab-style li {
+  flex-grow: 0 !important;
+}
+.tab-style li a {
+  border-bottom: none !important;
+  padding: 0;
+}
+/* ---------------------------- */
+
+@media screen and (min-width: 1280px) {
+  .dog-image:before {
+    content: "";
+    background-image: url(/src/component/FriendSection/assets/Epic-arrow4.png.png);
+    width: 30%;
+    height: 60%;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: -42px;
+    top: -28%;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .before-img:before {
+    width: 29%;
+    left: -130px;
+  }
+  .dog-image:before {
+    width: 32%;
+    height: 56%;
+    left: -58px;
+    top: -30%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .left-section-friend {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .before-img:before {
+    width: 38%;
+    left: -135px;
+  }
+  .dog-image:before {
+    width: 41%;
+    height: 64%;
+    left: -85px;
+    top: -40%;
+  }
+  .bg-round:before {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bottom-border {
+    position: relative;
+  }
+  .before-img:before,
+  .dog-image:before,
+  .before-img:after {
+    display: none;
+  }
+  .bg-login,
+  .bg-chngpas {
+    position: relative;
+    z-index: 1;
+  }
+  .bg-login:before,
+  .bg-chngpas:before {
+    content: "";
+    position: absolute;
+    background-image: url(/src/component/SignUp/assets/Frame_26.png);
+    width: 78%;
+    height: 20%;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 55px;
+    z-index: -1;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: #ff553e;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+    text-transform: uppercase;
+    font-size: 24px;
+    padding-left: 50px;
+    padding-top: 50px;
+  }
+
+  .menu li a {
+    padding: 10px;
+  }
+  .bg-login {
+    height: 100vh;
+  }
+  .close-menu,
+  .open-menu {
+    display: block;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+  .nearbybg-image {
+    margin-top: 0px;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #000 !important;
+  color: #000 !important;
+}
