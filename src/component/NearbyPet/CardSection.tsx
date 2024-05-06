@@ -157,7 +157,7 @@ const CardSection = () => {
 
 					{/* ---------------------------------- */}
 
-					<div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 my-20 justify-center">
+					<div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 py-20 justify-center">
 						{petsData.data.length === 0 ? (
 							<h1 className="text-[24px] flex justify-center w-full xl:col-span-4 lg:col-span-3 md:col-span-2  font-semibold">
 								{"No pets found!"}

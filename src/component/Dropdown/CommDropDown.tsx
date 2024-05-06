@@ -22,7 +22,7 @@ const CommDropDown = ({
 				</svg>
 			</button>
 			<ul
-				className={`dropdown-menu absolute  w-[100%] rounded-lg mt-2 ml-2 shadow-md ${
+				className={`dropdown-menu absolute  w-[100%] rounded-lg mt-2 ml-2 shadow-md z-10 ${
 					isDropDownOpen ? "block" : "hidden"
 				} text-gray-700 pt-1`}>
 				{children}
